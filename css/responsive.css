@@ -1,0 +1,651 @@
+/*
+ * Responsive Styles
+ * Media queries and responsive design rules for the physiotherapy website
+ */
+
+/* 
+ * Breakpoints:
+ * - xs: 0px and up
+ * - sm: 576px and up
+ * - md: 768px and up
+ * - lg: 992px and up
+ * - xl: 1200px and up
+ * - xxl: 1400px and up
+ */
+
+/* Extra Small devices (portrait phones) */
+@media (max-width: 575.98px) {
+    /* Typography adjustments */
+    h1, .h1 {
+      font-size: 3.6rem;
+    }
+    
+    h2, .h2 {
+      font-size: 3rem;
+    }
+    
+    h3, .h3 {
+      font-size: 2.4rem;
+    }
+    
+    /* Container padding */
+    .container {
+      padding: 0 1.6rem;
+    }
+    
+    /* Header & Navigation */
+    .site-header {
+      padding: var(--spacing-sm) 0;
+    }
+    
+    .logo {
+      font-size: 2.4rem;
+    }
+    
+    /* Hero Section */
+    .hero-section {
+      padding: calc(8rem + var(--spacing-md)) 0 var(--spacing-lg);
+    }
+    
+    .hero-title {
+      font-size: 3.6rem;
+    }
+    
+    .hero-description {
+      font-size: 1.6rem;
+      margin-bottom: var(--spacing-md);
+    }
+    
+    .hero-ctas {
+      flex-direction: column;
+      gap: var(--spacing-sm);
+    }
+    
+    .hero-ctas .btn {
+      width: 100%;
+    }
+    
+    .hero-media {
+      width: 100%;
+      margin-top: var(--spacing-md);
+    }
+    
+    /* Stats Bar */
+    .stats-bar .container {
+      flex-direction: column;
+      gap: var(--spacing-md);
+    }
+    
+    .stats-item {
+      padding: var(--spacing-sm) 0;
+      border-bottom: 1px solid var(--light-gray);
+    }
+    
+    .stats-item:last-child {
+      border-bottom: none;
+    }
+    
+    /* Section Spacing & Headers */
+    section {
+      padding: var(--spacing-xl) 0;
+    }
+    
+    .section-header {
+      margin-bottom: var(--spacing-lg);
+    }
+    
+    .section-title {
+      font-size: 3rem;
+    }
+    
+    /* About Section */
+    .about-image-container {
+      margin-bottom: var(--spacing-lg);
+    }
+    
+    .experience-badge {
+      bottom: -2rem;
+      right: -1rem;
+      width: 10rem;
+      height: 10rem;
+    }
+    
+    .experience-years {
+      font-size: 3.6rem;
+    }
+    
+    .expertise-item {
+      padding: var(--spacing-sm);
+    }
+    
+    /* Services Grid */
+    .services-grid {
+      gap: var(--spacing-md);
+    }
+    
+    .service-card {
+      padding: var(--spacing-md);
+    }
+    
+    .service-title {
+      font-size: 2rem;
+    }
+    
+    /* Work Grid */
+    .work-grid {
+      grid-template-rows: repeat(4, 25rem);
+    }
+    
+    /* Pricing Cards */
+    .pricing-card {
+      padding: var(--spacing-lg) var(--spacing-md);
+    }
+    
+    .pricing-card.featured {
+      transform: translateY(0);
+    }
+    
+    /* Testimonials */
+    .testimonial-card {
+      padding: var(--spacing-md);
+    }
+    
+    .testimonial-quote {
+      font-size: 1.6rem;
+    }
+    
+    /* Contact */
+    .contact-info-item {
+      gap: var(--spacing-sm);
+    }
+    
+    .contact-icon {
+      width: 4rem;
+      height: 4rem;
+      font-size: 1.6rem;
+    }
+    
+    .contact-form {
+      gap: var(--spacing-sm);
+    }
+    
+    .map-container {
+      height: 30rem;
+    }
+    
+    /* Footer */
+    .footer-top {
+      gap: var(--spacing-lg);
+    }
+    
+    .footer-nav-column {
+      margin-bottom: var(--spacing-md);
+    }
+    
+    .footer-bottom {
+      flex-direction: column;
+      gap: var(--spacing-sm);
+      text-align: center;
+    }
+    
+    .footer-social,
+    .footer-legal {
+      justify-content: center;
+    }
+    
+    /* Back to Top Button */
+    .back-to-top {
+      width: 4rem;
+      height: 4rem;
+      font-size: 1.6rem;
+      bottom: 2rem;
+      right: 2rem;
+    }
+    
+    /* Overlapping Sections */
+    .about-section,
+    .services-section,
+    .work-section,
+    .pricing-section,
+    .testimonials-section,
+    .contact-section {
+      margin-top: -5rem;
+      padding-top: calc(var(--spacing-xl) + 5rem);
+      border-radius: 2rem 2rem 0 0;
+    }
+  }
+  
+  /* Small devices (landscape phones) */
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    /* Typography adjustments */
+    h1, .h1 {
+      font-size: 4.2rem;
+    }
+    
+    h2, .h2 {
+      font-size: 3.2rem;
+    }
+    
+    /* Container padding */
+    .container {
+      padding: 0 2rem;
+    }
+    
+    /* Hero Section */
+    .hero-title {
+      font-size: 4.2rem;
+    }
+    
+    .hero-description {
+      font-size: 1.6rem;
+    }
+    
+    .hero-ctas {
+      flex-direction: column;
+      gap: var(--spacing-sm);
+      max-width: 30rem;
+      margin: 0 auto;
+    }
+    
+    /* Stats Bar */
+    .stats-bar .container {
+      flex-wrap: wrap;
+      gap: var(--spacing-md);
+    }
+    
+    .stats-item {
+      flex: 0 0 48%;
+    }
+    
+    /* Expertise Grid */
+    .expertise-grid {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-sm);
+    }
+    
+    /* Services Grid */
+    .services-grid {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-md);
+    }
+    
+    /* Work Grid */
+    .work-grid {
+      grid-template-columns: 1fr;
+      grid-auto-rows: 28rem;
+    }
+    
+    /* Pricing Cards */
+    .pricing-grid {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-lg);
+    }
+    
+    /* Contact Section */
+    .contact-container {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-lg);
+    }
+    
+    /* Footer */
+    .footer-top {
+      flex-direction: column;
+      gap: var(--spacing-lg);
+    }
+    
+    .footer-nav {
+      flex-wrap: wrap;
+    }
+    
+    .footer-nav-column {
+      flex: 0 0 48%;
+      margin-bottom: var(--spacing-lg);
+    }
+    
+    /* Overlapping Sections */
+    .about-section,
+    .services-section,
+    .work-section,
+    .pricing-section,
+    .testimonials-section,
+    .contact-section {
+      margin-top: -6rem;
+      padding-top: calc(var(--spacing-xl) + 6rem);
+      border-radius: 2.5rem 2.5rem 0 0;
+    }
+  }
+  
+  /* Medium devices (tablets) */
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    /* Typography adjustments */
+    h1, .h1 {
+      font-size: 5rem;
+    }
+    
+    h2, .h2 {
+      font-size: 3.6rem;
+    }
+    
+    /* Hero Section */
+    .hero-content {
+      max-width: 100%;
+      text-align: center;
+      margin-bottom: var(--spacing-xl);
+    }
+    
+    .hero-description {
+      max-width: 60rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .hero-ctas {
+      justify-content: center;
+      max-width: 40rem;
+      margin: 0 auto;
+    }
+    
+    .hero-media {
+      position: relative;
+      width: 70%;
+      margin: 0 auto;
+      transform: none;
+      top: 0;
+      right: 0;
+    }
+    
+    /* About Section */
+    .about-content {
+      flex-direction: column;
+    }
+    
+    .about-image-container {
+      margin-bottom: var(--spacing-xl);
+      max-width: 50rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    /* Expertise Grid */
+    .expertise-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Services Grid */
+    .services-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Work Grid */
+    .work-grid {
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: 25rem;
+    }
+    
+    /* Pricing Cards */
+    .pricing-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .pricing-card.featured {
+      grid-column: span 2;
+      max-width: 40rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    /* Contact Section */
+    .contact-container {
+      grid-template-columns: 1fr;
+      gap: var(--spacing-xl);
+    }
+    
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .contact-social {
+      grid-column: span 2;
+      text-align: center;
+    }
+    
+    .contact-social .social-links {
+      justify-content: center;
+    }
+    
+    /* Footer */
+    .footer-top {
+      flex-direction: column;
+      gap: var(--spacing-xl);
+    }
+    
+    .footer-logo {
+      text-align: center;
+      max-width: 100%;
+    }
+    
+    .footer-tagline {
+      max-width: 100%;
+    }
+    
+    .footer-nav {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--spacing-lg);
+    }
+    
+    /* Overlapping Sections */
+    .about-section,
+    .services-section,
+    .work-section,
+    .pricing-section,
+    .testimonials-section,
+    .contact-section {
+      margin-top: -8rem;
+      padding-top: calc(var(--spacing-xl) + 8rem);
+      border-radius: 2.5rem 2.5rem 0 0;
+    }
+  }
+  
+  /* Large devices (desktops) */
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    /* Typography adjustments */
+    h1, .h1 {
+      font-size: 6rem;
+    }
+    
+    h2, .h2 {
+      font-size: 4rem;
+    }
+    
+    /* Hero Section */
+    .hero-title {
+      font-size: 6rem;
+    }
+    
+    .hero-media {
+      width: 42%;
+    }
+    
+    /* Services Grid */
+    .services-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--spacing-md);
+    }
+    
+    /* Pricing Cards */
+    .pricing-card {
+      padding: var(--spacing-lg) var(--spacing-md);
+    }
+    
+    /* Overlapping Sections */
+    .about-section,
+    .services-section,
+    .work-section,
+    .pricing-section,
+    .testimonials-section,
+    .contact-section {
+      margin-top: -10rem;
+      padding-top: calc(var(--spacing-xxl) + 10rem);
+    }
+  }
+  
+  /* Extra large devices (large desktops) */
+  @media (min-width: 1200px) {
+    /* Hero Section */
+    .hero-title {
+      font-size: 7.2rem;
+    }
+    
+    .hero-media {
+      width: 45%;
+    }
+    
+    /* Overlapping Sections */
+    .about-section,
+    .services-section,
+    .work-section,
+    .pricing-section,
+    .testimonials-section,
+    .contact-section {
+      margin-top: -10rem;
+      padding-top: calc(var(--spacing-xxl) + 10rem);
+    }
+  }
+  
+  /* Special case for mobile menu */
+  @media (max-width: 991.98px) {
+    .main-nav {
+      display: none;
+    }
+    
+    .menu-toggle {
+      display: flex;
+    }
+    
+    .mobile-menu {
+      display: flex;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .mobile-menu {
+      display: none;
+    }
+  }
+  
+  /* Special case for custom cursor */
+  @media (pointer: coarse) {
+    .cursor {
+      display: none;
+    }
+  }
+  
+  /* Print styles */
+  @media print {
+    .site-header,
+    .menu-toggle,
+    .mobile-menu,
+    .hero-ctas,
+    .scroll-indicator,
+    .back-to-top,
+    .form-submit,
+    .footer-form,
+    .footer-social,
+    .footer-legal {
+      display: none !important;
+    }
+    
+    body {
+      color: #000;
+      background: #fff;
+      font-size: 12pt;
+    }
+    
+    a {
+      text-decoration: underline;
+      color: #000;
+    }
+    
+    .container {
+      max-width: 100%;
+      padding: 0;
+    }
+    
+    .hero-section,
+    .about-section,
+    .services-section,
+    .work-section,
+    .pricing-section,
+    .testimonials-section,
+    .contact-section {
+      padding: 20pt 0;
+      margin: 0;
+      border-radius: 0;
+      page-break-inside: avoid;
+    }
+    
+    .hero-title,
+    .section-title {
+      font-size: 24pt;
+    }
+    
+    .hero-title .highlight::after,
+    .highlight::after {
+      display: none;
+    }
+    
+    .experience-badge,
+    .pricing-badge {
+      border: 1pt solid #000;
+      color: #000;
+      background: none;
+    }
+    
+    .service-card,
+    .pricing-card,
+    .testimonial-card {
+      border: 1pt solid #ccc;
+      box-shadow: none;
+    }
+    
+    .footer-logo .logo {
+      color: #000;
+    }
+  }
+  
+  /* Reduced Motion */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+    
+    .hover-lift:hover,
+    .hover-scale:hover,
+    .hover-rotate:hover,
+    .service-card:hover,
+    .pricing-card:hover,
+    .expertise-item:hover,
+    .social-link:hover,
+    .footer-nav-list a:hover,
+    .back-to-top:hover {
+      transform: none !important;
+    }
+    
+    .about-section,
+    .services-section,
+    .work-section,
+    .pricing-section,
+    .testimonials-section,
+    .contact-section {
+      margin-top: 0;
+      padding-top: var(--spacing-xxl);
+      border-radius: 0;
+    }
+  }

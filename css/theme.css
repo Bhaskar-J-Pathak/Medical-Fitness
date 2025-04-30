@@ -1,0 +1,529 @@
+/*
+ * Theme Styles
+ * Light and dark theme variables and styles for the physiotherapy website
+ */
+
+/* Theme Variables */
+:root {
+    /* Light Theme Colors (Default) */
+    --primary: #3D5CFF;
+    --primary-light: #5C8FFF;
+    --primary-dark: #2842CC;
+    
+    --secondary: #FFC83D;
+    --secondary-light: #FFD76E;
+    --secondary-dark: #DBA829;
+    
+    --accent: #FF6B3D;
+    --accent-light: #FF8B66;
+    --accent-dark: #E05732;
+    
+    --black: #15191F;
+    --dark-gray: #2C3039;
+    --gray: #73767F;
+    --light-gray: #E3E5E8;
+    --off-white: #F9FAFB;
+    --white: #FFFFFF;
+    
+    /* Section Background Colors - Light Theme */
+    --bg-hero: var(--white);
+    --bg-about: #F0F4FF;
+    --bg-services: var(--white);
+    --bg-work: var(--off-white);
+    --bg-pricing: var(--white);
+    --bg-testimonials: #F0F4FF;
+    --bg-contact: var(--white);
+  
+    /* Text Colors - Light Theme */
+    --text-primary: var(--black);
+    --text-secondary: var(--dark-gray);
+    --text-tertiary: var(--gray);
+    
+    /* Element Colors - Light Theme */
+    --card-bg: var(--white);
+    --input-bg: var(--off-white);
+    --border-color: var(--light-gray);
+    --shadow-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Dark Theme Variables */
+  body.dark-theme {
+    /* Primary Colors - Orange scheme for dark mode */
+    --primary: #FF6B00;
+    --primary-light: #FF8C3F;
+    --primary-dark: #E05700;
+    
+    /* Secondary Colors */
+    --secondary: #FFB800;
+    --secondary-light: #FFCB4D;
+    --secondary-dark: #DBA100;
+    
+    /* Background Colors */
+    --bg-hero: #0F1215;
+    --bg-about: #1A1D23;
+    --bg-services: #0F1215;
+    --bg-work: #1A1D23;
+    --bg-pricing: #0F1215;
+    --bg-testimonials: #1A1D23;
+    --bg-contact: #0F1215;
+    
+    /* Text Colors */
+    --text-primary: #F9FAFB;
+    --text-secondary: #C4C7CC;
+    --text-tertiary: #9EA2A8;
+    
+    /* Element Colors */
+    --card-bg: #23262E;
+    --input-bg: #1A1D23;
+    --border-color: #3A3F4A;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    
+    /* Base element colors */
+    background-color: #0F1215;
+    color: #F9FAFB;
+  }
+  
+  /* Theme Toggle Switch */
+  .theme-toggle {
+    position: relative;
+    margin: 0 2rem;
+  }
+  
+  .theme-switch {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .theme-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 5rem;
+    height: 2.6rem;
+    background-color: var(--light-gray);
+    border-radius: var(--radius-full);
+    position: relative;
+    transition: var(--transition-medium);
+  }
+  
+  body.dark-theme .theme-label {
+    background-color: #23262E;
+  }
+  
+  .theme-label i {
+    height: 2.2rem;
+    width: 2.2rem;
+    line-height: 2.2rem;
+    text-align: center;
+    font-size: 1.4rem;
+    transition: var(--transition-medium);
+  }
+  
+  .theme-label .fa-sun {
+    color: var(--warning);
+  }
+  
+  .theme-label .fa-moon {
+    color: var(--gray);
+  }
+  
+  body.dark-theme .theme-label .fa-sun {
+    color: var(--light-gray);
+  }
+  
+  body.dark-theme .theme-label .fa-moon {
+    color: var(--primary);
+  }
+  
+  .theme-slider {
+    position: absolute;
+    left: 0.2rem;
+    top: 0.2rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    background-color: var(--white);
+    transition: var(--transition-medium);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .theme-switch:checked + .theme-label .theme-slider {
+    transform: translateX(2.4rem);
+    background-color: #1A1D23;
+  }
+  
+  /* Theme Transition Overlay */
+  .theme-transition-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Dark Theme Styles */
+  /* Header */
+  body.dark-theme .site-header.scrolled {
+    background-color: #1A1D23;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  body.dark-theme .logo {
+    color: #F9FAFB;
+  }
+  
+  body.dark-theme .logo span {
+    background: linear-gradient(to right, #FF6B00, #FF8C3F);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  body.dark-theme .nav-link {
+    color: #C4C7CC;
+  }
+  
+  body.dark-theme .nav-link:hover,
+  body.dark-theme .nav-link.active {
+    color: #FF6B00;
+  }
+  
+  body.dark-theme .nav-link::after {
+    background-color: #FF6B00;
+  }
+  
+  body.dark-theme .menu-bar {
+    background-color: #F9FAFB;
+  }
+  
+  /* Mobile menu */
+  body.dark-theme .mobile-menu {
+    background-color: #0F1215;
+  }
+  
+  body.dark-theme .mobile-nav-link {
+    color: #C4C7CC;
+  }
+  
+  body.dark-theme .mobile-nav-link:hover,
+  body.dark-theme .mobile-nav-link.active {
+    color: #FF6B00;
+  }
+  
+  body.dark-theme .mobile-menu-contact {
+    color: #9EA2A8;
+  }
+  
+  /* Sections & Elements */
+  body.dark-theme .section-title {
+    color: #F9FAFB;
+  }
+  
+  body.dark-theme .section-subtitle {
+    background-color: rgba(255, 107, 0, 0.1);
+    color: #FF6B00;
+  }
+  
+  body.dark-theme .section-description {
+    color: #C4C7CC;
+  }
+  
+  /* Buttons */
+  body.dark-theme .btn-primary {
+    background-color: #FF6B00;
+    color: #FFFFFF;
+  }
+  
+  body.dark-theme .btn-primary:hover {
+    background-color: #E05700;
+  }
+  
+  body.dark-theme .btn-outline {
+    color: #FF6B00;
+    border-color: #FF6B00;
+  }
+  
+  body.dark-theme .btn-outline:hover {
+    background-color: #FF6B00;
+    color: #FFFFFF;
+  }
+  
+  /* About Section */
+  body.dark-theme .about-heading {
+    color: #F9FAFB;
+  }
+  
+  body.dark-theme .about-paragraph {
+    color: #C4C7CC;
+  }
+  
+  body.dark-theme .expertise-item {
+    background-color: #23262E;
+  }
+  
+  body.dark-theme .expertise-icon {
+    background-color: rgba(255, 107, 0, 0.1);
+    color: #FF6B00;
+  }
+  
+  body.dark-theme .expertise-title {
+    color: #F9FAFB;
+  }
+  
+  body.dark-theme .expertise-desc {
+    color: #C4C7CC;
+  }
+  
+  body.dark-theme .stat-num,
+  body.dark-theme .stat-num::after {
+    color: #FF6B00;
+  }
+  
+  body.dark-theme .stats-label {
+    color: #9EA2A8;
+  }
+  
+  body.dark-theme .experience-badge {
+    background: linear-gradient(135deg, #FF6B00, #E05700);
+  }
+  
+  /* Services */
+  body.dark-theme .service-card {
+    background-color: #23262E;
+    border-color: #3A3F4A;
+  }
+  
+  body.dark-theme .service-icon {
+    background-color: rgba(255, 107, 0, 0.1);
+    color: #FF6B00;
+  }
+  
+  body.dark-theme .service-title {
+    color: #F9FAFB;
+  }
+  
+  body.dark-theme .service-description {
+    color: #C4C7CC;
+  }
+  
+  body.dark-theme .service-link {
+    color: #FF6B00;
+  }
+  
+  /* Work Gallery */
+  body.dark-theme .work-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  }
+  
+  body.dark-theme .work-title {
+    color: #FFFFFF;
+  }
+  
+  body.dark-theme .work-category {
+    color: #C4C7CC;
+  }
+  
+  /* Pricing */
+  body.dark-theme .pricing-card {
+    background-color: #23262E;
+    border-color: #3A3F4A;
+  }
+  
+  body.dark-theme .pricing-card.featured {
+    border-color: #FF6B00;
+  }
+  
+  body.dark-theme .pricing-title {
+    color: #F9FAFB;
+  }
+  
+  body.dark-theme .pricing-price .price-value {
+    color: #FF6B00;
+  }
+  
+  body.dark-theme .pricing-duration {
+    color: #9EA2A8;
+  }
+  
+  body.dark-theme .pricing-features li {
+    color: #C4C7CC;
+    border-bottom-color: rgba(154, 162, 168, 0.2);
+  }
+  
+  body.dark-theme .pricing-badge {
+    background-color: #FF6B00;
+  }
+  
+  /* Testimonials */
+  body.dark-theme .testimonial-card {
+    background-color: #23262E;
+  }
+  
+  body.dark-theme .testimonial-quote {
+    color: #C4C7CC;
+  }
+  
+  body.dark-theme .testimonial-quote::before {
+    color: #FF6B00;
+  }
+  
+  body.dark-theme .testimonial-rating {
+    color: #FFB800;
+  }
+  
+  body.dark-theme .testimonial-image {
+    border-color: #FF6B00;
+  }
+  
+  body.dark-theme .testimonial-name {
+    color: #F9FAFB;
+  }
+  
+  body.dark-theme .testimonial-position {
+    color: #9EA2A8;
+  }
+  
+  body.dark-theme .testimonials-prev,
+  body.dark-theme .testimonials-next {
+    background-color: #23262E;
+    color: #FF6B00;
+  }
+  
+  body.dark-theme .testimonials-prev:hover,
+  body.dark-theme .testimonials-next:hover {
+    background-color: #FF6B00;
+    color: #FFFFFF;
+  }
+  
+  /* Contact */
+  body.dark-theme .contact-icon {
+    background-color: rgba(255, 107, 0, 0.1);
+    color: #FF6B00;
+  }
+  
+  body.dark-theme .contact-text h3 {
+    color: #F9FAFB;
+  }
+  
+  body.dark-theme .contact-text p {
+    color: #C4C7CC;
+  }
+  
+  body.dark-theme .social-link {
+    background-color: #23262E;
+    color: #C4C7CC;
+  }
+  
+  body.dark-theme .social-link:hover {
+    background-color: #FF6B00;
+    color: #FFFFFF;
+  }
+  
+  /* Form elements */
+  body.dark-theme .form-label {
+    color: #F9FAFB;
+  }
+  
+  body.dark-theme .form-input,
+  body.dark-theme .form-textarea,
+  body.dark-theme .form-select {
+    background-color: #1A1D23;
+    border-color: #3A3F4A;
+    color: #F9FAFB;
+  }
+  
+  body.dark-theme .form-input:focus,
+  body.dark-theme .form-textarea:focus,
+  body.dark-theme .form-select:focus {
+    border-color: #FF6B00;
+    box-shadow: 0 0 0 3px rgba(255, 107, 0, 0.1);
+  }
+  
+  body.dark-theme .form-input::placeholder,
+  body.dark-theme .form-textarea::placeholder {
+    color: #9EA2A8;
+  }
+  
+  /* Footer */
+  body.dark-theme .site-footer {
+    background-color: #0F1215;
+  }
+  
+  body.dark-theme .footer-tagline {
+    color: #C4C7CC;
+  }
+  
+  body.dark-theme .footer-heading {
+    color: #F9FAFB;
+  }
+  
+  body.dark-theme .footer-heading::after {
+    background: linear-gradient(to right, #FF6B00, transparent);
+  }
+  
+  body.dark-theme .footer-links a {
+    color: #C4C7CC;
+  }
+  
+  body.dark-theme .footer-links a:hover {
+    color: #FFFFFF;
+  }
+  
+  body.dark-theme .footer-links a::before {
+    background-color: #FF6B00;
+  }
+  
+  body.dark-theme .footer-text {
+    color: #C4C7CC;
+  }
+  
+  body.dark-theme .footer-input {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+  
+  body.dark-theme .footer-input::placeholder {
+    color: #9EA2A8;
+  }
+  
+  body.dark-theme .footer-submit {
+    background-color: #FF6B00;
+  }
+  
+  body.dark-theme .footer-submit:hover {
+    background-color: #FF8C3F;
+  }
+  
+  body.dark-theme .footer-copyright {
+    color: #9EA2A8;
+  }
+  
+  body.dark-theme .footer-social-link {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+  
+  body.dark-theme .footer-social-link:hover {
+    background-color: #FF6B00;
+  }
+  
+  body.dark-theme .footer-legal a {
+    color: #9EA2A8;
+  }
+  
+  body.dark-theme .footer-legal a:hover {
+    color: #FFFFFF;
+  }
+  
+  /* Back to top */
+  body.dark-theme .back-to-top {
+    background-color: #FF6B00;
+  }
+  
+  body.dark-theme .back-to-top:hover {
+    background-color: #E05700;
+  }
