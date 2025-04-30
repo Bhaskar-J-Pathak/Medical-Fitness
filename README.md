@@ -28,11 +28,8 @@ This website is designed for a physiotherapist, showcasing their services, exper
 
 As this is a static website, there is no installation required. Simply download the files and open the `index.html` file in your web browser.
 
-## Usage
-
-1.  Download the project files from the repository.
-2.  Open the `index.html` file in your web browser.
-3.  Navigate through the website to explore the content.
+##No Usage
+This website is for a client specifically. Don't use it without getting permission.
 
 ## Credits
 
@@ -41,4 +38,4 @@ As this is a static website, there is no installation required. Simply download 
 
 ## Author
 
-\Bhaskar
+Bhaskar
